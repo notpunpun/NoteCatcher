@@ -6,13 +6,14 @@ import json
 # Paste your Friebase Details here
 # !!! VERY IMPORTANT !!!
 CONFIG = {
-    "apiKey" : "",
-    "authDomain" : "",
-    "databaseURL" : "",
-    "projectId" : "",
-    "storageBucket" : "",
-    "messagingSenderId" : "",
-    "appId" : ""
+    apiKey: "AIzaSyBKGggrDOX7PDvizuN79OC9enDoBbnhlhQ",
+    authDomain: "todolistapp-5dcbf.firebaseapp.com",
+    databaseURL: "https://todolistapp-5dcbf-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "todolistapp-5dcbf",
+    storageBucket: "todolistapp-5dcbf.appspot.com",
+    messagingSenderId: "788420521087",
+    appId: "1:788420521087:web:7609ea0315621ac2bba34a",
+    measurementId: "G-1PG6NP03LZ"
   }
 
 firebase = pyrebase.initialize_app(CONFIG)
