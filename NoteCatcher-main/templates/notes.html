@@ -1,0 +1,36 @@
+{% extends 'template.html' %}
+
+{% block Header %}<h3>Your Notes</h3>{% endblock %}
+
+{% block content %}
+
+<div id="note-updates"></div>
+<div class="form">
+  <textarea id="new_note" class="form-control"></textarea>
+  <div align="center" class='m-4 d-flex justify-content-around align-center align-items-center' id="note-updates">
+    <button class="btn btn-primary" onclick="newnote()">Add note</button>
+  </div>
+</div>
+
+
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+    <use xlink:href="#info-fill" />
+  </svg>
+  <div>
+    You have <strong id="note-num">{{ number }}</strong> Notes. Logged in as <strong>{{ session['Logged_in'] }}</strong>
+  </div>
+</div>
+
+
+<div id="notes_section">
+  {% for note in notes %}
+  <div class="alert alert-secondary alert-dismissible fade show text-dark" role="alert">
+    {{ notes[note] }}
+    <button type="button" onclick="deletenote('{{ note }}')" class="btn-close" data-bs-dismiss="alert"
+      aria-label="Close"></button>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

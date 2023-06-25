@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+
+{% block Header %}<h3>Hurrey 🥳 your account has been created</h3>{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-success d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+    <div>
+        <strong>Welcome to Notes App.</strong> You have successfully Registered with  the email id <strong>{{ email }}</strong>.
+    </div>
+</div>
+
+To Access your Notes go to <a href="/notes">Notes</a>
+{% endblock %}
